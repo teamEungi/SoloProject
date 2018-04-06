@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.ComboBox?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="180.0"
+	prefWidth="290.0">
+	<children>
+		<Label text="*메뉴추가*" layoutX="10" layoutY="10" />
+		<Label text="카테고리: " layoutX="30" layoutY="40" />
+		<ComboBox fx:id="cbI_category" layoutX="90" layoutY="40"
+			prefHeight="23" prefWidth="137" promptText="커트" />
+
+		<Label text="메뉴명: " layoutX="30" layoutY="75" />
+		<TextField fx:id="txtI_name" layoutX="90" layoutY="75" />
+
+		<Label text="가격: " layoutX="30" layoutY="105" />
+		<TextField fx:id="txtI_price" layoutX="90" layoutY="105" />
+
+		<Button text="저장" fx:id="btnOk" layoutX="130" layoutY="140" />
+		<Button text="닫기" fx:id="btnExit" layoutX="180" layoutY="140" />
+
+	</children>
+</AnchorPane>
+

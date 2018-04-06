@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Separator?>
+<?import com.example.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="770.0"
+	prefWidth="1100.0" fx:controller="controller.RootController">
+	<children>
+		<!-- 회원정보 -->
+		<Separator layoutX="115" layoutY="20" orientation="HORIZONTAL"
+			prefWidth="507" />
+		<Separator layoutX="21" layoutY="300" orientation="HORIZONTAL"
+			prefWidth="600" />
+		<Separator layoutX="20" layoutY="20" orientation="VERTICAL"
+			prefHeight="280" />
+		<Separator layoutX="620" layoutY="20" orientation="VERTICAL"
+			prefHeight="280" />
+		<!-- 서비스정보 -->
+		<Separator layoutX="760" layoutY="20" orientation="HORIZONTAL"
+			prefWidth="322" />
+		<Separator layoutX="640" layoutY="300" orientation="HORIZONTAL"
+			prefWidth="441" />
+		<Separator layoutX="640" layoutY="20" orientation="VERTICAL"
+			prefHeight="280" />
+		<Separator layoutX="1080" layoutY="20" orientation="VERTICAL"
+			prefHeight="280" />
+		<!-- 님의 서비스 정보 -->
+		<Separator layoutX="280" layoutY="340" orientation="HORIZONTAL"
+			prefWidth="465" />
+		<Separator layoutX="21" layoutY="540" orientation="HORIZONTAL"
+			prefWidth="725" />
+		<Separator layoutX="20" layoutY="340" orientation="VERTICAL"
+			prefHeight="200" />
+		<Separator layoutX="745" layoutY="340" orientation="VERTICAL"
+			prefHeight="200" />
+
+		<!-- Today -->
+		<Separator layoutX="835" layoutY="340" orientation="HORIZONTAL"
+			prefWidth="248" />
+		<Separator layoutX="760" layoutY="540" orientation="HORIZONTAL"
+			prefWidth="322" />
+		<Separator layoutX="760" layoutY="340" orientation="VERTICAL"
+			prefHeight="200" />
+		<Separator layoutX="1081" layoutY="340" orientation="VERTICAL"
+			prefHeight="200" />
+		<!-- 매장현황 -->
+		<Separator layoutX="115" layoutY="570" orientation="HORIZONTAL"
+			prefWidth="969" />
+		<Separator layoutX="21" layoutY="740" orientation="HORIZONTAL"
+			prefWidth="1060" />
+		<Separator layoutX="21" layoutY="570" orientation="VERTICAL"
+			prefHeight="170" />
+		<Separator layoutX="1081" layoutY="570" orientation="VERTICAL"
+			prefHeight="170" />
+
+		<Label text="*회원정보" layoutX="40" layoutY="15" scaleX="1.4"
+			scaleY="1.5" />
+		<fx:define>
+			<ToggleGroup fx:id="tgSearchMember" />
+		</fx:define>
+		<RadioButton fx:id="rbM_neme" text="이름" userData="이름"
+			toggleGroup="$tgSearchMember" layoutX="50" layoutY="48" />
+		<RadioButton fx:id="rbM_hp" text="번호(-없이 입력)" userData="번호"
+			toggleGroup="$tgSearchMember" layoutX="150" layoutY="48" />
+
+		<TextField fx:id="txtSearch" layoutX="320" layoutY="45">
+			<prefWidth>200</prefWidth>
+		</TextField>
+		<Button fx:id="btnSearch" layoutX="530" layoutY="40"
+			prefHeight="30.0" prefWidth="70.0" text="찾기" />
+		<TableView fx:id="tableView" layoutX="40" layoutY="75"
+			prefHeight="170" prefWidth="560" />
+
+		<Button fx:id="btnTotal" layoutX="250" layoutY="255" text="회원 전체조회"
+			prefHeight="30.0" prefWidth="100.0" />
+		<Button fx:id="btnEdit" layoutX="140" layoutY="255" text="회원정보수정"
+			prefHeight="30.0" prefWidth="100.0" />
+		<Button fx:id="btnJoin" layoutX="40" layoutY="255" text="회원가입"
+			prefHeight="30.0" prefWidth="90.0" />
+		<!-- <Button fx:id="btnMemberOk" layoutX="515" layoutY="255" text="회원선택" 
+			prefHeight="30.0" prefWidth="85.0" /> -->
+
+		<Label text="*서비스정보" layoutX="665" layoutY="15" scaleX="1.4"
+			scaleY="1.5" />
+		<Button fx:id="btnAll" layoutX="660" layoutY="40" prefHeight="30.0"
+			prefWidth="55.0" text="ALL" />
+		<Button fx:id="btnCut" layoutX="720" layoutY="40" prefHeight="30.0"
+			prefWidth="50.0" text="커트" />
+		<Button fx:id="btnPerm" layoutX="775" layoutY="40" prefHeight="30.0"
+			prefWidth="50.0" text="펌" />
+		<Button fx:id="btnColer" layoutX="830" layoutY="40" prefHeight="30.0"
+			prefWidth="50.0" text="염색" />
+		<Button fx:id="btnClinic" layoutX="885" layoutY="40"
+			prefHeight="30.0" prefWidth="55.0" text="클리닉" />
+		<Button fx:id="btnDry" layoutX="945" layoutY="40" prefHeight="30.0"
+			prefWidth="55.0" text="드라이" />
+		<Button fx:id="btnEtc" layoutX="1005" layoutY="40" prefHeight="30.0"
+			prefWidth="55.0" text="Etc." />
+
+		<TableView fx:id="ItemTable" layoutX="660" layoutY="78"
+			prefHeight="165" prefWidth="400" />
+
+		<Button fx:id="btnMenuOk" layoutX="660" layoutY="255" text="메뉴선택"
+			prefHeight="30.0" prefWidth="85.0" textFill="RED" />
+		<Button fx:id="btnItemAdd" layoutX="850" layoutY="255"
+			prefHeight="30.0" prefWidth="100.0" text="메뉴생성" />
+		<Button fx:id="btnItemDelete" layoutX="960" layoutY="255"
+			prefHeight="30.0" prefWidth="100.0" text="메뉴삭제" />
+
+		<Label text="*" layoutX="30" layoutY="330" scaleX="1.4" scaleY="1.5" />
+
+		<TextField fx:id="txtName" layoutX="40" layoutY="325"
+			prefWidth="100" />
+		<Label text="님의 서비스정보" layoutX="165" layoutY="330" scaleX="1.4"
+			scaleY="1.5" />
+		<Label
+			text="----------------------------------회원정보를 선택한 후 서비스 정보를 선택하고 '메뉴 선택' 버튼을 눌러주세요----------------------------------"
+			layoutX="115" layoutY="307" scaleX="1.2" scaleY="1.2" textFill="RED" />
+		<TableView fx:id="OrderTable" layoutX="40" layoutY="355"
+			prefHeight="170" prefWidth="460" />
+
+		<Label text="총액:  " layoutX="520" layoutY="370" scaleX="1.3"
+			scaleY="1.3" textFill="RED" />
+		<TextField fx:id="txtSum" layoutX="580" layoutY="370"
+			prefWidth="130" scaleX="1.3" scaleY="1.3" promptText=" 가격" />
+		<Label text="==================" layoutX="535" layoutY="410"
+			scaleX="1.3" scaleY="1.3" textFill="RED" />
+		<!-- <TextField fx:id="txtSale" layoutX="525" layoutY="390" prefWidth="120" 
+			scaleX="1.1" scaleY="1.1" promptText=" 할인금액" /> <Button fx:id="btnSale" layoutX="525" 
+			layoutY="430" prefHeight="35.0" prefWidth="120" scaleX="1.1" scaleY="1.1" 
+			text="할인" /> -->
+		<Button fx:id="btnOrderDelete" layoutX="515" layoutY="440"
+			prefWidth="65.0" prefHeight="85.0" text="항목삭제" />
+		<Button fx:id="btnPay" layoutX="590" layoutY="440" prefWidth="140.0"
+			prefHeight="85.0" text="결제" />
+		<!-- <Label text="아아아오오오" fx:id="lblOrderName" layoutX="50" layoutY="335" 
+			textFill="GREY" /> <Label text="아아아오오오" fx:id="lblOrderGender" layoutX="160" 
+			layoutY="350" textFill="#408080" /> <Label text="아아아오오오" fx:id="lblOrderMenu" 
+			layoutX="260" layoutY="350" textFill="#408080" /> <Label text="아아아오오오" fx:id="lblOrderPrice" 
+			layoutX="360" layoutY="350" textFill="#408080" /> -->
+
+		<Label text="*Today" layoutX="775" layoutY="330" scaleX="1.4"
+			scaleY="1.5" />
+
+		<Label text="◎방문자수: " layoutX="800" layoutY="365" scaleX="1.4"
+			scaleY="1.5" />
+		<TextField text="3" fx:id="txtVisits" layoutX="920"
+			layoutY="360" opacity="0.5" />
+
+		<Label text="◎총수입: " layoutX="798" layoutY="400" scaleX="1.4"
+			scaleY="1.5" />
+		<TextField text="58,000" fx:id="txtTotalIncomes" layoutX="920"
+			layoutY="400" opacity="0.5" />
+
+		<Label text="◎미수금: " layoutX="799" layoutY="440" scaleX="1.4"
+			scaleY="1.5" />
+		<TextField text="0" fx:id="txtReceivable" layoutX="920"
+			layoutY="440" opacity="0.5" />
+
+		<Button fx:id="btnMonthlyTotalAmount" layoutX="780" layoutY="490"
+			prefHeight="30.0" prefWidth="130.0" text="금일매출액" />
+		<Button fx:id="btnMonthlyTotalPeople" layoutX="930" layoutY="490"
+			prefHeight="30.0" prefWidth="130.0" text="금일 방문고객수" />
+
+
+		<Label text="*매장현황" layoutX="40" layoutY="560" scaleX="1.4"
+			scaleY="1.5" />
+		<TableView fx:id="productTable" layoutX="40" layoutY="585"
+			prefHeight="145" prefWidth="1025" />
+
+	</children>
+</AnchorPane>
+
+
+

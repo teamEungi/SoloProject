@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="310.0"
+	prefWidth="290.0">
+
+	<children>
+		<Label fx:id="lblJoin" text="*회원가입*" layoutX="10" layoutY="10" />
+		<Label text="이름: " layoutX="30" layoutY="40" />
+		<TextField fx:id="txtM_name" layoutX="90" layoutY="40" />
+
+		<Label text="성별: " layoutX="30" layoutY="75" />
+		<fx:define>
+			<ToggleGroup fx:id="tgM_gender" />
+		</fx:define>
+		<RadioButton fx:id="rbM_male" text="남성" userData="남성"
+			toggleGroup="$tgM_gender" layoutX="90" layoutY="75" />
+		<RadioButton fx:id="rbM_female" text="여성" userData="여성"
+			toggleGroup="$tgM_gender" layoutX="150" layoutY="75" />
+
+		<Label text="H.P: " layoutX="30" layoutY="105" />
+
+		<TextField fx:id="txtM_hp" layoutX="90" layoutY="105" />
+
+		<Label text="방문동기: " layoutX="30" layoutY="135" />
+		<TextField fx:id="txtM_visitMotivate" layoutX="90" layoutY="135" />
+		<Label text="ex)블라블라블라으라차" layoutX="90" layoutY="160" textFill="GRAY" />
+		<Label text="요렇게 입력하세요 고갱님" layoutX="90" layoutY="175" textFill="GRAY" />
+		<Label text="생년월일: " layoutX="30" layoutY="195" />
+		<DatePicker fx:id="dpM_birthday" layoutX="90" layoutY="195" />
+		<Label text="추천인: " layoutX="30" layoutY="230" />
+		<TextField fx:id="txtM_recomm" layoutX="90" layoutY="230" />
+
+		<Button text="저장" fx:id="btnOk" layoutX="180" layoutY="270" />
+		<Button text="닫기" fx:id="btnExit" layoutX="230" layoutY="270" />
+
+	</children>
+</AnchorPane>
+
